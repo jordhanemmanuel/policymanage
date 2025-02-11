@@ -1,0 +1,16 @@
+venv/
+.env
+.venv
+*.xlsx
+*.pickle
+*.pkl
+\.vscode
+.__pycache__/
+__pycache__/
+*.tmp
+*.sql
+.vscode
+
+#Enviroment
+/fastapienv
+/app/logs
