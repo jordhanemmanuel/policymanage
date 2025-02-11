@@ -1,33 +1,22 @@
 # policymanage
 
-### Executar o Projeto
+### Execute the project
 
-Para executar o projeto, existem as seguintes formas:
+To execute the project you need:
 
-- Docker
+- Install dependences from requirements.txt
 ```sh
-docker compose run capitalgains
+pip install -r requirements.txt
 ```
-- Input redirection:
-```sh
-docker compose run -T capitalgains < [diretorio]/input.txt
-```
+Note: If you're using linux, some distros need pip3 command.
 
-Caso estiver executando da pasta raíz do projeto onde o **docker-compose.yaml** está localizado, pode usar o arquivo com inputs padrões:
+- Run uvicorn
+Inside **/app** FOLDER, run:
 ```sh
-docker compose run -T capitalgains < input.txt
-```
-
-### Executar Testes
-
--Testes unitários
-Para executar a suíte de testes unitários:
-```sh
-docker compose run capitalgains_test
+cd app
+uvicorn main:app
 ```
 
--Testes de integração
-Para executar a suíte de testes de integração:
-```sh
-docker compose run capitalgains_test_integration
-```
+-- Access swagger
+After the server is up, access:
+127.0.0.1:8000/docs
